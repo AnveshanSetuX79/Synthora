@@ -60,6 +60,8 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
+        "https://synthora-bvfl.onrender.com",
+        "*"  # Allow all origins for now - restrict after frontend deployment
     ],
     allow_credentials=True,
     allow_methods=["*"],
