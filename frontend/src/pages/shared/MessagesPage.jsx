@@ -185,5 +185,3 @@ function MessagesPage() {
 }
 
 export default MessagesPage
-
-export default MessagesPage
