@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import logging
 import time
 
-from .routers import auth, leads, deals, outreach, payments, demos, analytics, business_owners, admin, disputes, reviews, health, notifications
+from .routers import auth, leads, deals, outreach, payments, demos, analytics, business_owners, admin, disputes, reviews, health, notifications, admin_users
 from .scheduler import start_scheduler, stop_scheduler
 from .middleware.performance import PerformanceMiddleware
 from .middleware.security import (
@@ -80,6 +80,7 @@ app.include_router(demos.router)
 app.include_router(analytics.router)
 app.include_router(business_owners.router)
 app.include_router(admin.router)
+app.include_router(admin_users.router)
 app.include_router(disputes.router)
 app.include_router(reviews.router)
 app.include_router(notifications.router)
