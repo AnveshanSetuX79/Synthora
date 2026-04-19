@@ -48,8 +48,8 @@ app.add_middleware(XSSProtectionMiddleware)
 app.add_middleware(CSRFProtectionMiddleware)
 app.add_middleware(
     RateLimitMiddleware,
-    requests_per_minute=60,
-    requests_per_hour=1000
+    requests_per_minute=120,  # Increased from 60
+    requests_per_hour=5000    # Increased from 1000
 )
 
 # Configure CORS
@@ -61,7 +61,9 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
         "https://synthora-bvfl.onrender.com",
-        "*"  # Allow all origins for now - restrict after frontend deployment
+        "https://synthora-nu.vercel.app",  # Your Vercel frontend
+        "https://synthora-1ayul4ptp-anveshansetux79s-projects.vercel.app",  # Vercel preview
+        "*"  # Allow all origins for now - restrict after testing
     ],
     allow_credentials=True,
     allow_methods=["*"],
