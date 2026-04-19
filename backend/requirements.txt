@@ -13,8 +13,8 @@ python-jose[cryptography]==3.3.0
 bcrypt==4.1.2
 python-multipart==0.0.6
 
-# Validation
-pydantic==2.5.0
+# Validation (specific versions with pre-built wheels for Render)
+pydantic==2.5.3
 pydantic-settings==2.1.0
 
 # External APIs
@@ -24,19 +24,6 @@ urllib3==2.1.0
 # AI / Machine Learning (optional - for ChatGPT mode)
 openai==1.12.0
 
-# Testing
-pytest==7.4.3
-pytest-asyncio==0.21.1
-hypothesis==6.92.1
-httpx==0.25.2
-
-# Load testing
-locust==2.20.0
-
-# Security (optional - for production rate limiting with Redis)
-# slowapi==0.1.9
-# redis==5.0.1
-
 # Template engine
 jinja2==3.1.2
 
@@ -45,3 +32,6 @@ apscheduler==3.10.4
 
 # System monitoring
 psutil==5.9.6
+
+# Production server
+gunicorn==21.2.0
